@@ -1,15 +1,9 @@
 #include "shell.h"
 
 /**
- * buiilt_in_execu - Executes built-in commands based on the provided tokens.
- * It checks if a command is provided, and if not, returns 1.
- * It iterates through an array of built-in commands
- * and their corresponding functions.
- * If the provided command matches a built-in command, it executes
- * the corresponding function and returns its status.
- * If the command is not a built-in, it returns 1.
- * @tokens: Arguments being passed.
- * Return: The return value depends on the execution of the built-in function.
+ * main entry - built-in commands through provided tokens.
+ * @tokens: Arg to be passed.
+ * Return: successful  on the execution of intititual function.
  */
 int buiilt_in_execu(char **tokens)
 {
@@ -17,23 +11,22 @@ int buiilt_in_execu(char **tokens)
 	unsigned int length;
 	unsigned int num;
 	unsigned int i;
-	/* Array of built-in commands and their corresponding functions */
 	built_s builtin[] = {
 		{"exit", shell_exit},
 		{"env", shell_env},
 		{NULL, NULL}
 	};
-	/* Check if no command is provided */
+	/* find no command available */
 	if (tokens[0] == NULL)
 		return (1);
-	/* Get the length of the first token (command) */
+	/* check the size of the intial token (command) */
 	length = str_len(tokens[0]);
-	/* Get the number of built-in commands */
+	/* check no of built-in commands */
 	num = shell_no_builtins(builtin);
-	/* Iterate through the array of built-in commands */
+	/* alter array of built-in commands */
 	for (i = 0; i < num; i++)
 	{
-		/* Check if the provided command matches the current built-in command */
+		/* doest available command same the current built-in command */
 		if (str_cmp(tokens[0], builtin[i].name, length) == 0)
 		{
 			/* Execute the corresponding built-in function and store its return value */
