@@ -1,16 +1,9 @@
 #include "shell.h"
 
 /**
- * get_env - This function searches for a specific environment
- * variable (name) in the array environ.
- * It creates a copy of the environment variables using the
- * copy_env function to avoid modifying the original environment.
- * It then compares the input name with each environment variable
- * and extracts the corresponding value.
- * If a match is found, it allocates memory for the value and returns it.
- * If no match is found, it returns NULL.
+ * get_env - Func find a specific env var
  * @name: Environment variable to get.
- * Return: Pointer to the environment variable or NULL if there is no match.
+ * Return: Pointer to the lenv var or 0 if there is no duplicate.
  */
 char *get_env(const char *name)
 {
@@ -69,13 +62,10 @@ char *get_env(const char *name)
 }
 
 /**
- * copy_env - This function creates a copy of the environment variables to avoid
- * modifying the original environment.
- * It allocates memory for the copy and each individual environment variable.
- * It uses str_cpy to copy each environment variable to the new memory.
- * It returns the double pointer to the copy of environment variables.
- * @env_copy: Pointer to the copy of environment variables.
- * @env_length: Length of the environment variables.
+ * copy_env - func generate a duplicate if the environment variables to avoid
+ * of envt variables.
+ * @env_copy: fPointer to the copy of environment variables.
+ * @env_length: fLength of the environment variables.
  * Return: Double pointer to the copy of environment variables.
  */
 char **copy_env(char **env_copy, unsigned int env_length)
