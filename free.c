@@ -2,11 +2,7 @@
 
 /**
  * free_all - This function is designed to free dynamically allocated memory
- * atthe end of the main loop in your shell program.
- * The function uses the free function to release the memory occupied
- * by each dynamically allocated variable.
- * It checks whether fullpath was dynamically allocated
- * (flag == 1) before attempting to free it.
+ * to free it.
  * @tokens: Pointer to tokens array.
  * @path: Pointer to path variable.
  * @line: Pointer to user input buffer.
@@ -29,12 +25,6 @@ void free_all(char **tokens, char *path, char *line, char *fullpath, int flag)
 
 /**
  * free_dp - This function is responsible for freeing a double pointer (array)
- * and the memoryoccupied by the strings it points to.
- * The function uses for loop to iterate each element of the double pointer.
- * It uses the free function to release the memory occupied by the strings
- * pointed to by the double pointer.
- * Finally, it frees the memory occupied by the double pointer
- * itself using free(array).
  * @array: Double pointer to free.
  * @length: Length of the double pointer.
  * Return: void
