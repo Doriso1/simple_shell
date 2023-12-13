@@ -1,20 +1,17 @@
 #include "shell.h"
 
 /**
- * str_cmp - Compares two strings (name and variable) character by character up
- * to the specified length (length).
- * Returns 1 if the strings are not equal, -1 if the lengths are different,
- * and 0 if the strings are equal.
- * @name: Name supplied by the user to search for.
- * @variable: Variable to compare against.
- * @length: Length of the name.
- * Return: 1 if strings are equal, -1 if they are not.
+ * str_func - Comparison 2 strgs up.
+ * @name: user prompt to search for.
+ * @variable: Var difference.
+ * @length: name size.
+ * Return: 1 if str successful, -1 if otherwise.
  */
 int str_cmp(char *name, char *variable, unsigned int length)
 {
 	unsigned int var_length;
 	unsigned int i;
-	/* Get the length of the variable string. */
+	/* find length of the var string. */
 	var_length = str_len(variable);
 	/* If lengths are not equal, strings can't be the same. */
 	if (var_length != length)
@@ -31,14 +28,11 @@ int str_cmp(char *name, char *variable, unsigned int length)
 }
 
 /**
- * str_ncmp - Compares two strings (name and variable) up to
- * a specified length (length).
- * Returns 1 if the strings are equal up to the specified length,
- * and -1 otherwise.
- * @name: Name supplied by the user to search for.
- * @variable: Variable to compare against.
- * @length: Length to compare up to.
- * Return: 1 if strings are equal, -1 if they are not.
+ * str_func - difference of 2 strgs.
+ * @name: prompt entered by the user.
+ * @variable: Var to compare against.
+ * @length: size to compare up to.
+ * Return: 1 if strings are equal, -1 if otherwise
  */
 int str_ncmp(char *name, char *variable, unsigned int length)
 {
@@ -57,11 +51,10 @@ int str_ncmp(char *name, char *variable, unsigned int length)
 }
 
 /**
- * str_cpy - Copies the string pointed to by src to buffer pointed to by dest.
- * Returns the pointer to dest.
+ * str_func - Copies the stg pointed to by src to varto by dest.
  * @dest: String destination.
- * @src: String source.
- * Return: The pointer to dest.
+ * @src: Strh source.
+ * Return: The pointer array.
  */
 char *str_cpy(char *dest, char *src)
 {
@@ -76,8 +69,8 @@ char *str_cpy(char *dest, char *src)
 /**
  * str_len - Returns the length of the input string s. Counts characters until
  * the null terminator is encountered.
- * @s: String to be evaluated.
- * Return: Length of the string.
+ * @s: Strg to be compatible.
+ * Return: string size.
  */
 int str_len(char *s)
 {
