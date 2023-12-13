@@ -1,16 +1,10 @@
 #include "shell.h"
 
 /**
- * child - This function is designed to be called when executing a
- * command in a child process.
- * It takes the full path of the executable (fullpath) and
- * tokenized user input (tokens).
- * It uses the fork system call to create a child process.
- * In the child process (child_pid == 0), it uses execve to
- * replace the current process
- * image with a new one specified by fullpath. If execve fails, it returns -1.
- * In the parent process (child_pid > 0), it waits for the child process
- * to finish using the wait system call.
+ * child - Func to be executed when executing a
+ * prompt in a child process.
+ * child_pid == 0), it uses execve to
+ * using the wait system call.
  * The function returns 0 on success and -1 on failure.
  * @fullpath: Full path of the executable.
  * @tokens: Tokenized user input.
