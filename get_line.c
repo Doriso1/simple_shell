@@ -14,15 +14,15 @@ char *get_line(FILE *fp)
 	ssize_t read;
 	size_t len;
 
-	line = NULL;  /* Initialize line to NULL to avoid undefined behavior */
-	len = 0;            /* Initialize len to 0 */
-	/* Read a line of input from the user into the buffer 'line' */
+	line = NULL;  /* NULL line to avoid undefined behavior */
+	len = 0;
+	/* user input from the buffer line */
 	read = getline(&line, &len, fp);
-	/* Check if getline encountered an error or reached the end of file */
+	/* if not successful getline or get to the file end */
 	if (read == -1)
 	{
-		free(line);     /* Free the memory allocated for the buffer */
-		exit(EXIT_SUCCESS); /* Exit the program with success status */
+		free(line);
+		exit(EXIT_SUCCESS);
 	}
-	return (line);      /* Return the buffer containing the user input */
+	return (line);
 }
