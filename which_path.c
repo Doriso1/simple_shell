@@ -1,23 +1,17 @@
 #include "shell.h"
 
 /**
- * which_path - Searches directories in the PATH variable for a command.
- * Takes a command, a pointer to store the full path of the command (fullpath),
- * and the PATH variable (path).
- * Copies the PATH variable to a temporary variable path_copy.
- * Iterates through directories in the PATH variable using strtok.
- * Constructs the full path of the command by concatenating the directory
- * path and the command.
- * Checks if the full path is executable using the access function.
+ * which_path - Get PATH var dir for a command.
+ * the access function.
  * Returns the full path if executable, otherwise, returns NULL.
  * @command: Command to search for.
- * @fullpath: Full path of the command to execute.
- * @path: Full PATH variable.
+ * @thefullpath: Full path of the command to execute.
+ * @path: The func PATH var.
  * Return: Pointer to the full_path of the command.
  */
 char *which_path(char *command, char *fullpath, char *path)
 {
-	/* Length variables */
+	/* the var size */
 	unsigned int com_length, pa_length, orig_pa_length;
 	char *path_copy, *token;  /* String pointers */
 	com_length = str_len(command);
