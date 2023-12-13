@@ -1,10 +1,10 @@
 #include "shell.h"
 
 /**
- * shell_exit - Exits the shell.
- * This function is designed to be used as a built-in command to exit the shell
- * Return: The function returns -1 to indicate to the main shell loop that the
- * program should exit.
+ * shell_exit - func to Exits the shell.
+ *  exit the shell
+ * Return: The func returns -1 to indicate to the hool that the
+ * program shld exit.
  */
 
 int shell_exit(void)
@@ -14,12 +14,9 @@ int shell_exit(void)
 
 /**
  * shell_env - Prints environment variables.
- * This function prints the environment variables to the standard output.
- * It uses the `environ` variable, which is an external variable containing
- * the environment variables.
- * The function iterates through the `environ` array and prints each
+ * through the `environ` array and prints each
  * environment variable followed by a newline character.
- * Return: The function returns 0.
+ * Return: The function returns 0 if successful.
  */
 int shell_env(void)
 {
